@@ -31,3 +31,4 @@ nuvemhub/
 ├── migrations/        # Scripts de migração do banco de dados
 ├── README.md          # Documentação do projeto
 └── go.mod             # Gerenciamento de dependências
+```
