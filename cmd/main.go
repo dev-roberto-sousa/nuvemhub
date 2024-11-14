@@ -1,16 +1,14 @@
 package main
 
 import (
-	// "fmt"
+	"github.com/dev-roberto-sousa/nuvemhub/internals/handlers"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "Pong",
-		})
-	})
+
+	r.GET("/users", handlers.GetAllUsers)
+
 	r.Run()
 }
