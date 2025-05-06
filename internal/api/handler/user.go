@@ -15,6 +15,12 @@ func NewUserHandler(svc *service.UserService) *UserHandler {
 	return &UserHandler{svc: svc}
 }
 
+// @Summary Listar usuários
+// @Description Retorna todos os usuários cadastrados
+// @Tags Users
+// @Produce json
+// @Success 200 {object} map[string]string
+// @Router /api/v1/users [get]
 func (h *UserHandler) GetUsers(c *gin.Context) {
 	users, err := h.svc.GetAllUsers()
 	if err != nil {
